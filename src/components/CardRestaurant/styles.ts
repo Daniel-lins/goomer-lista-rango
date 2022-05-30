@@ -6,12 +6,15 @@ export const Container = styled.div`
   height: 100px;
   box-shadow: 0px 2px 4px #00000029;
   margin: 20px;
+
+  cursor: pointer;
   figure {
     img {
       top: 241px;
       left: 490px;
       width: 100px;
       height: 100px;
+      border-radius: 4px 0px 0px 4px;
     }
   }
 
@@ -21,14 +24,13 @@ export const Container = styled.div`
     text-align: left;
     margin: 20px;
     letter-spacing: 0px;
-    width:250px;
-    
-      font-size: 12px;
-      font-weight: 400;
-    }
+    width: 250px;
+
+    font-size: 12px;
+    font-weight: 400;
 
     h3 {
-      font-weight: 400;
+      font-weight: 600;
     }
 
     /* font: normal normal medium 16px/19px Montserrat; */
@@ -49,7 +51,6 @@ export const Container = styled.div`
     color: #fff;
     font-size: 16px;
     padding: 10px;
-    transform: translate(50px, -40px)}
-
-
+    transform: translate(50px, -40px);
+  }
 `;

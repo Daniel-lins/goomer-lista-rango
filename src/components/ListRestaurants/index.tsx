@@ -15,11 +15,11 @@ export const ListRestaurants = () => {
   }, [dispatch]);
   return (
     <Container>
-      {console.log(restaurants.restaurants)}
       {restaurants.restaurants.map((item: any) => {
         return (
           <CardRestaurant
             key={item.id}
+            id={item.id}
             image={item.image}
             name={item.name}
             adress={item.address}

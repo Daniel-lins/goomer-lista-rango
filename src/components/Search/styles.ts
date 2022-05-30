@@ -1,0 +1,37 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    top: 155px;
+    left: 221px;
+    width: 840px;
+    height: 40px;
+    background: #fbfbfb 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 4px #00000029;
+    opacity: 1;
+    border-radius: 20px 0 0 20px;
+    font-size: 18px;
+    padding: 15px;
+    border-style: none;
+    font-weight: 500;
+
+    color: #505050;
+  }
+
+  button {
+    height: 40px;
+    background: #fbfbfb 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 4px 0px #00000029;
+    opacity: 1;
+    border-style: none;
+    padding: 15px;
+    border-radius: 0 20px 20px 0;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+`;

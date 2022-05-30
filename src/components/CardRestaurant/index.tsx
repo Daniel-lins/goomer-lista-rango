@@ -1,8 +1,14 @@
 import { Container } from "./styles";
+import { useNavigate } from "react-router-dom";
 
-export const CardRestaurant = ({ image, name, adress }: any) => {
+export const CardRestaurant = ({ image, name, adress, id }: any) => {
+  let navigate = useNavigate();
+
+  const HandleNavigate = () => {
+    navigate(`/restaurant/${id}`);
+  };
   return (
-    <Container>
+    <Container onClick={HandleNavigate}>
       <figure>
         <img src={image} alt={name} />
       </figure>

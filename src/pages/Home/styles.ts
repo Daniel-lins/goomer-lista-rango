@@ -8,3 +8,10 @@ export const Container = styled.div`
     font-size: 25px;
   }
 `;
+
+export const ContainerFilteredCard = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+`;
