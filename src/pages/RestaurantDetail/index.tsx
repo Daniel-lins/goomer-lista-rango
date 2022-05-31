@@ -9,6 +9,7 @@ import {
 } from "../../services/store/modules/restaurant/restaurant.slice";
 
 import { CardInfo } from "../../components/CardInfo";
+import { Accordion } from "../../components/Accordion";
 
 export const RestaurantDetail = () => {
   const { id } = useParams();
@@ -22,7 +23,8 @@ export const RestaurantDetail = () => {
   }, [dispatch, id]);
   return (
     <Container>
-      <CardInfo />{" "}
+      <CardInfo />
+      <Accordion />
     </Container>
   );
 };
