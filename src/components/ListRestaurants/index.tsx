@@ -4,15 +4,12 @@ import {
   fetchAsyncRestaurant,
   getAllRestaurants,
 } from "../../services/store/modules/restaurant/restaurant.slice";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+
 import { CardRestaurant } from "../CardRestaurant";
+
 export const ListRestaurants = () => {
   const restaurants = useSelector(getAllRestaurants);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAsyncRestaurant());
-  }, [dispatch]);
+
   return (
     <Container>
       {restaurants.restaurants.map((item: any) => {
