@@ -26,6 +26,7 @@ export const ButtonContainer = styled.div`
     border-radius: 10px;
     padding: 10px;
     font-size: 13px;
+    font-weight: 600;
     background-color: #009ca3;
   }
 `;
