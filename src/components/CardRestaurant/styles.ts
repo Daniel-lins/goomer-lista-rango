@@ -2,19 +2,26 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 350px;
-  height: 100px;
+  width: 100%;
+  height: 6.75rem;
   box-shadow: 0px 2px 4px #00000029;
   margin: 20px;
 
   cursor: pointer;
   figure {
     img {
-      top: 241px;
+      width: 100%;
+      height: 100%;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+
+      object-fit: cover;
+
+      /* top: 241px;
       left: 490px;
       width: 100px;
       height: 100px;
-      border-radius: 4px 0px 0px 4px;
+      border-radius: 4px 0px 0px 4px; */
     }
   }
 
@@ -24,7 +31,7 @@ export const Container = styled.div`
     text-align: left;
     margin: 20px;
     letter-spacing: 0px;
-    width: 250px;
+    max-width: 250px;
 
     font-size: 12px;
     font-weight: 400;

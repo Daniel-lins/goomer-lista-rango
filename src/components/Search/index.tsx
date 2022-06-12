@@ -5,14 +5,14 @@ interface SearchProps {
   searchValue: string;
   setSearchValue: (param: string) => void;
 }
-export const Search = ({ searchValue, setSearchValue }: any) => {
+export const Search = ({ searchValue, setSearchValue, labelText }: any) => {
   return (
     <Container>
       <input
         type="text"
-        placeholder="Buscar estabelecimento"
         value={searchValue}
         onChange={(event) => setSearchValue(event.target.value)}
+        placeholder={labelText ?? "Buscar estabelecimento"}
       />
       <button>
         <HiSearch />{" "}

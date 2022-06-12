@@ -25,13 +25,14 @@ export const Container = styled.div`
   button {
     height: 40px;
     background: #fbfbfb 0% 0% no-repeat padding-box;
-    box-shadow: 0px 2px 4px 0px #00000029;
+    box-shadow: 0px 2px 0px 0px #00000029;
     opacity: 1;
     border-style: none;
-    padding: 15px;
+    padding: 17px;
     border-radius: 0 20px 20px 0;
     text-align: center;
     justify-content: center;
+    font-size: 15px;
     cursor: pointer;
   }
 `;
