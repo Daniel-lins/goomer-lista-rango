@@ -8,7 +8,7 @@ export const Container = styled.div`
   input {
     top: 155px;
     left: 221px;
-    width: 840px;
+    width: 50.4rem;
     height: 40px;
     background: #fbfbfb 0% 0% no-repeat padding-box;
     box-shadow: 0px 2px 4px #00000029;
@@ -18,8 +18,15 @@ export const Container = styled.div`
     padding: 15px;
     border-style: none;
     font-weight: 500;
-
     color: #505050;
+
+    @media (max-width: 808px) {
+      width: 30rem;
+    }
+
+    @media (max-width: 500px) {
+      width: 20rem;
+    }
   }
 
   button {

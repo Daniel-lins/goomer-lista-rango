@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { colors } from "../../styles/colors";
 
-export const Container = styled.div`
+interface TagProps {
+  isOpen?: boolean;
+}
+
+export const Container = styled.div<TagProps>`
   display: flex;
   width: 100%;
   height: 6.75rem;
@@ -44,13 +49,14 @@ export const Container = styled.div`
     color: #404040;
     opacity: 1;
   }
-  .openClose {
+  /* .openClose {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: #2b0d61;
+    background-color: ${({ isOpen }) =>
+    isOpen ? colors.purple[500] : colors.purple[100]};
     right: 0;
     top: 0;
     text-align: center;
@@ -58,6 +64,31 @@ export const Container = styled.div`
     color: #fff;
     font-size: 16px;
     padding: 10px;
-    transform: translate(50px, -40px);
+   
+  } */
+`;
+
+export const Tag = styled.span<TagProps>`
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px ${colors.gray[900]};
+  transform: translate(20px, -30px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: ${({ isOpen }) =>
+    isOpen ? colors.purple[500] : colors.purple[100]};
+
+  p {
+    font-weight: 700;
+    font-size: 0.5rem;
+    color: ${colors.white};
+  }
+  @media (max-width: 750px) {
+    position: absolute;
+    right: 20px;
   }
 `;

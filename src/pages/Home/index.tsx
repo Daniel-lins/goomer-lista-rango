@@ -51,14 +51,9 @@ export const Home = () => {
       return (
         <Content>
           {filteredRestaurants.map((item: any) => (
-            <CardRestaurant
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              name={item.name}
-              adress={item.address}
-            />
+            <CardRestaurant key={item.id} restaurant={item} />
           ))}
+          <>{console.log(filteredRestaurants)}</>
         </Content>
       );
     }
