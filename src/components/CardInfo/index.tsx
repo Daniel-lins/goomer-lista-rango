@@ -2,13 +2,7 @@ import { Container, ButtonContainer, ContainerInfoRestaurant } from "./styles";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-// import { Link } from "react-router-dom";
-
-import {
-  fetchAsyncRestaurantDetail,
-  removeSelectedRestaurant,
-  getselectRestaurant,
-} from "../../services/store/modules/restaurant/restaurant.slice";
+import { getselectRestaurant } from "../../services/store/modules/restaurant/restaurant.slice";
 
 import { formatRestaurantSchedules } from "../../functions/formatRestaurantSchedules";
 

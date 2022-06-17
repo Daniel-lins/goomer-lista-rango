@@ -1,12 +1,7 @@
-import react, { useState, useEffect } from "react";
-import { ListRestaurants } from "../../components/ListRestaurants";
+import { useState, useEffect } from "react";
+
 import { Theme } from "../../components/Theme";
-import {
-  Container,
-  ContainerFilteredCard,
-  NoItemsToRender,
-  Content,
-} from "./styles";
+import { Container, NoItemsToRender, Content } from "./styles";
 import { searchRestaurants } from "../../functions/SearchRestaurants";
 import {
   fetchAsyncRestaurant,
@@ -27,14 +22,15 @@ export const Home = () => {
   const data = useSelector(getAllRestaurants);
 
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAsyncRestaurant());
+  }, []);
 
   useEffect(() => {
-    try {
-      dispatch(fetchAsyncRestaurant());
-    } finally {
+    setTimeout(function () {
       setLoad(false);
-    }
-  }, [dispatch]);
+    }, 300);
+  }, []);
 
   useEffect(() => {
     setFilteredRestaurants(
@@ -50,10 +46,14 @@ export const Home = () => {
     if (filteredRestaurants.length > 0) {
       return (
         <Content>
-          {filteredRestaurants.map((item: any) => (
-            <CardRestaurant key={item.id} restaurant={item} />
+          {filteredRestaurants.map((item: IRestaurant) => (
+            <CardRestaurant
+              key={item.id}
+              restaurant={item}
+              id={item.id}
+              name={item.name}
+            />
           ))}
-          <>{console.log(filteredRestaurants)}</>
         </Content>
       );
     }

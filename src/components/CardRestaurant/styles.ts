@@ -10,7 +10,7 @@ export const Container = styled.div<TagProps>`
   width: 100%;
   height: 6.75rem;
   box-shadow: 0px 2px 4px #00000029;
-  margin: 20px;
+  margin: 2rem;
 
   cursor: pointer;
   figure {
@@ -21,12 +21,6 @@ export const Container = styled.div<TagProps>`
       border-bottom-left-radius: 4px;
 
       object-fit: cover;
-
-      /* top: 241px;
-      left: 490px;
-      width: 100px;
-      height: 100px;
-      border-radius: 4px 0px 0px 4px; */
     }
   }
 
@@ -36,7 +30,7 @@ export const Container = styled.div<TagProps>`
     text-align: left;
     margin: 20px;
     letter-spacing: 0px;
-    max-width: 250px;
+    max-width: 260px;
 
     font-size: 12px;
     font-weight: 400;
@@ -45,27 +39,9 @@ export const Container = styled.div<TagProps>`
       font-weight: 600;
     }
 
-    /* font: normal normal medium 16px/19px Montserrat; */
     color: #404040;
     opacity: 1;
   }
-  /* .openClose {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    background-color: ${({ isOpen }) =>
-    isOpen ? colors.purple[500] : colors.purple[100]};
-    right: 0;
-    top: 0;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
-   
-  } */
 `;
 
 export const Tag = styled.span<TagProps>`
@@ -74,7 +50,6 @@ export const Tag = styled.span<TagProps>`
   border-radius: 50%;
   box-shadow: 0px 1px 2px ${colors.gray[900]};
   transform: translate(20px, -30px);
-
   display: flex;
   align-items: center;
   justify-content: center;

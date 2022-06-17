@@ -23,9 +23,6 @@ const menuSlice = createSlice({
     addRestaurants: (state: any, { payload }) => {
       state.menu = payload;
     },
-    // consoleRestaurant: (state: any, { payload }) => {
-    //   console.log(state.restaurants) = payload;
-    // },
   },
 
   extraReducers: {
@@ -39,15 +36,10 @@ const menuSlice = createSlice({
     [fetchAsyncMenu.rejected]: () => {
       console.log("Rejected!");
     },
-    // [fetchAsyncRestaurantDetail.fulfilled]: (state: any, { payload }) => {
-    //   console.log("Fetched Successfully!");
-    //   return { ...state, selectRestaurant: payload };
-    // },
   },
 });
 
 export const { addMenus }: any = menuSlice.actions;
-// export const { consoleRestaurant } = restaurantSlice.actions;
 export const { removeSelectedMenu }: any = menuSlice.actions;
 export const getAllMenus = (state: any) => state.menu;
 export const getselectMenu = (state: any) => state.menu.selectRestaurant;

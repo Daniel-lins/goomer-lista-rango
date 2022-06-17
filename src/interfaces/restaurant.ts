@@ -5,9 +5,17 @@ export interface IHours {
 }
 
 export interface IRestaurant {
+  restaurant: {
+    id: number;
+    name: string;
+    image?: string;
+    hours?: IHours[];
+    address?: string;
+  };
   id: number;
   name: string;
   image?: string;
   hours?: IHours[];
   address?: string;
+  key?: number;
 }

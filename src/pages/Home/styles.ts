@@ -11,8 +11,7 @@ export const Container = styled.div`
   justify-content: center;
 
   h1 {
-    margin: 2rem 0;
-
+    margin: 3rem 0;
     font-weight: 500;
     font-size: 1.5rem;
   }

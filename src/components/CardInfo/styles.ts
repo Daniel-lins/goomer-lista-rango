@@ -24,6 +24,7 @@ export const ButtonContainer = styled.div`
   button {
     cursor: pointer;
     border-radius: 10px;
+
     padding: 10px;
     font-size: 13px;
     font-weight: 600;

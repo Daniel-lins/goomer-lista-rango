@@ -38,17 +38,23 @@ export const RestaurantDetail = () => {
     dispatch(fetchAsyncRestaurantDetail(id));
     dispatch(fetchAsyncMenu(id));
   }, [dispatch, id]);
-
+  console.log(menuData);
   useEffect(() => {
     setFilteredProducts(
       searchProducts({ searchValue, allProducts: MenuRestaurant })
     );
   }, [MenuRestaurant, searchValue]);
 
+  useEffect(() => {
+    setTimeout(function () {
+      setLoad(false);
+    }, 300);
+  }, []);
+
   const renderContent = useCallback(() => {
-    // if (load) {
-    //   return <Loading />;
-    // }
+    if (load) {
+      return <Loading />;
+    }
 
     if (filteredProducts?.length === 0) {
       return (

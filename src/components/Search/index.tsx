@@ -5,7 +5,11 @@ interface SearchProps {
   searchValue: string;
   setSearchValue: (param: string) => void;
 }
-export const Search = ({ searchValue, setSearchValue, labelText }: any) => {
+export const Search = ({
+  searchValue,
+  setSearchValue,
+  labelText,
+}: SearchProps) => {
   return (
     <Container>
       <input

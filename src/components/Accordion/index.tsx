@@ -1,8 +1,13 @@
-import react, { useState } from "react";
+import react, { useState, ReactElement } from "react";
+
 import { Container, AccordionWtrapper, Content, Icon } from "./styles";
 import chevron from "../../assets/icons/chevron.svg";
+interface AccordionProps {
+  category: string;
+  children?: ReactElement;
+}
 
-export const Accordion = ({ category, children }: any) => {
+export const Accordion = ({ category, children }: AccordionProps) => {
   const [isActive, setIsActive] = useState(false);
 
   function handleActive() {

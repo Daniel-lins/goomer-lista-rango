@@ -1,7 +1,5 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { AiFillLock } from "react-icons/ai";
-import { getAllMenus } from "../../services/store/modules/restaurant/menu.slice";
-import { useDispatch, useSelector } from "react-redux";
 import { Container, ImageWrapper, Content, PromotionTag } from "./styles";
 import award from "../../assets/icons/award.svg";
 import { colors } from "../../styles/colors";

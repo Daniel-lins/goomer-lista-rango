@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Container, Tag } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { checkIfRestaurantIsOpen } from "../../functions/checkIfRestaurantIsOpen";
+import { IRestaurant } from "../../interfaces/restaurant";
 
-export const CardRestaurant = ({ restaurant }: any) => {
+export const CardRestaurant = ({ restaurant }: IRestaurant) => {
   let navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const HandleNavigate = () => {
