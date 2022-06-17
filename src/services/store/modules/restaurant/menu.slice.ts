@@ -3,40 +3,40 @@ import api from "../../../requests/api";
 import { IMenu } from "../../../../interfaces/menu";
 
 export const fetchAsyncMenu: any = createAsyncThunk(
-  "menu/fetchAsyncMenu",
-  async (id) => {
-    const response = await api.get(`${id}/menu`);
-    return response.data;
-  }
+    "menu/fetchAsyncMenu",
+    async (id) => {
+        const response = await api.get(`${id}/menu`);
+        return response.data;
+    }
 );
 
 const initialState = {
-  Menus: <any>(<unknown>[]),
-  selectRestaurant: {},
-  FilterdMenu: [],
+    Menus: <any>(<unknown>[]),
+    selectRestaurant: {},
+    FilterdMenu: [],
 };
 
 const menuSlice = createSlice({
-  name: "menu",
-  initialState,
-  reducers: {
-    addRestaurants: (state: any, { payload }) => {
-      state.menu = payload;
+    name: "menu",
+    initialState,
+    reducers: {
+        addRestaurants: (state: any, { payload }) => {
+            state.menu = payload;
+        },
     },
-  },
 
-  extraReducers: {
-    [fetchAsyncMenu.pending]: () => {
-      console.log("Pending");
+    extraReducers: {
+        [fetchAsyncMenu.pending]: () => {
+            console.log("Pending");
+        },
+        [fetchAsyncMenu.fulfilled]: (state: any, { payload }) => {
+            console.log("Fetched Successfully!");
+            return { ...state, restaurants: payload };
+        },
+        [fetchAsyncMenu.rejected]: () => {
+            console.log("Rejected!");
+        },
     },
-    [fetchAsyncMenu.fulfilled]: (state: any, { payload }) => {
-      console.log("Fetched Successfully!");
-      return { ...state, restaurants: payload };
-    },
-    [fetchAsyncMenu.rejected]: () => {
-      console.log("Rejected!");
-    },
-  },
 });
 
 export const { addMenus }: any = menuSlice.actions;

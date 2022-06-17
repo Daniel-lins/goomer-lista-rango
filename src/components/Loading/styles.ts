@@ -12,16 +12,16 @@ const rotate = keyframes`
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  margin-top: 2rem;
+    width: 100%;
+    margin-top: 2rem;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Icon = styled(VscLoading)`
-  font-size: 2rem;
-  color: #009ca3;
-  animation: ${rotate} 0.8s linear infinite;
+    font-size: 2rem;
+    color: #009ca3;
+    animation: ${rotate} 0.8s linear infinite;
 `;

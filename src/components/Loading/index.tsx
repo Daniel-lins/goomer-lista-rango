@@ -1,9 +1,9 @@
 import { Container, Icon } from "./styles";
 
 export const Loading = () => {
-  return (
-    <Container>
-      <Icon />
-    </Container>
-  );
+    return (
+        <Container>
+            <Icon />
+        </Container>
+    );
 };

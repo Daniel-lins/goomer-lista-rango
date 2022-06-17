@@ -7,39 +7,46 @@ import { getselectRestaurant } from "../../services/store/modules/restaurant/res
 import { formatRestaurantSchedules } from "../../functions/formatRestaurantSchedules";
 
 export const CardInfo = () => {
-  let navigate = useNavigate();
-  const data = useSelector(getselectRestaurant);
+    let navigate = useNavigate();
+    const data = useSelector(getselectRestaurant);
 
-  const handleBackButton = () => {
-    navigate("/");
-  };
+    const handleBackButton = () => {
+        navigate("/");
+    };
 
-  return (
-    <Container>
-      <ButtonContainer>
-        <button onClick={handleBackButton}> VOLTAR</button>
-      </ButtonContainer>
-      <ContainerInfoRestaurant>
-        <figure>
-          <img src={data.image} alt={data.name} />
-        </figure>
+    return (
+        <Container>
+            <ButtonContainer>
+                <button onClick={handleBackButton}> VOLTAR</button>
+            </ButtonContainer>
+            <ContainerInfoRestaurant>
+                <figure>
+                    <img src={data.image} alt={data.name} />
+                </figure>
 
-        <div>
-          <strong>{data.name}</strong>
+                <div>
+                    <strong>{data.name}</strong>
 
-          <p>{data.address}</p>
+                    <p>{data.address}</p>
 
-          {data.hours &&
-            formatRestaurantSchedules(data.hours).map((schedule) => (
-              <span key={`${schedule.day}:${JSON.stringify(schedule.hour)}`}>
-                {schedule.day}:
-                <time>
-                  {schedule.hour.from} às {schedule.hour.to}
-                </time>
-              </span>
-            ))}
-        </div>
-      </ContainerInfoRestaurant>
-    </Container>
-  );
+                    {data.hours &&
+                        formatRestaurantSchedules(data.hours).map(
+                            (schedule) => (
+                                <span
+                                    key={`${schedule.day}:${JSON.stringify(
+                                        schedule.hour
+                                    )}`}
+                                >
+                                    {schedule.day}:
+                                    <time>
+                                        {schedule.hour.from} às{" "}
+                                        {schedule.hour.to}
+                                    </time>
+                                </span>
+                            )
+                        )}
+                </div>
+            </ContainerInfoRestaurant>
+        </Container>
+    );
 };
