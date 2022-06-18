@@ -62,7 +62,7 @@ export const Tag = styled.span<TagProps>`
         font-size: 0.5rem;
         color: ${colors.white};
     }
-    @media (max-width: 750px) {
+    @media (max-width: 769px) {
         position: absolute;
         right: 20px;
     }
