@@ -9,11 +9,11 @@ export const fetchAsyncMenu: any = createAsyncThunk(
         return response.data;
     }
 );
-
+export type MenuType = {
+    Menus: IMenu[];
+};
 const initialState = {
-    Menus: <any>(<unknown>[]),
-    selectRestaurant: {},
-    FilterdMenu: [],
+    Menus: [],
 };
 
 const menuSlice = createSlice({

@@ -1,4 +1,4 @@
-import react, { useState, ReactElement } from "react";
+import { useState, ReactElement } from "react";
 
 import { Container, AccordionWtrapper, Content, Icon } from "./styles";
 import chevron from "../../assets/icons/chevron.svg";
